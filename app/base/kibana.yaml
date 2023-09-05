@@ -30,10 +30,10 @@ spec:
               value: http://coordinate:9200
             - name: SERVER_PUBLICBASEURL
               # Route defined below
-              value: https://kibana-demo.apps.development.wels.home
+              value: https://kibana-demo.apps.asagare-c1.qe.rh-ocs.com
             - name: SERVER_NAME
               # Route defined below
-              value: kibana-demo.apps.development.wels.home
+              value: kibana-demo.apps.asagare-c1.qe.rh-ocs.com
           resources: {}
       restartPolicy: Always
 ---
@@ -58,7 +58,7 @@ metadata:
   annotations:
     cert-utils-operator.redhat-cop.io/certs-from-secret: letsencrypt
 spec:
-  host: kibana.apps.development.wels.home
+  host: kibana.apps.asagare-c1.qe.rh-ocs.com
   to:
     kind: Service
     name: kibana
