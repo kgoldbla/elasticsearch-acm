@@ -74,7 +74,7 @@ metadata:
   namespace: elasticsearch-demo-app
 spec:
   # Modify this to match your environment
-  host: es-master00.apps.development.wels.home
+  host: compute-0
   to:
     kind: Service
     name: es-master00
@@ -118,6 +118,7 @@ spec:
       source:
           blank: {}
       storage:
+          storageClassName: ocs-external-storagecluster-ceph-rbd
           resources:
               requests:
                   # Modify this to match requirements for your environment
