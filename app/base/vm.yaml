@@ -3,7 +3,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: es-master00-conf
-  namespace: kevin-dr
+  namespace: elasticsearch-demo-app
 data:
   # Modify the Xms and Xmx values as appropriate for your application
   # Modify the network.publish_host to match the service and namespace in your environment
@@ -45,7 +45,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: es-master00
-  namespace: kevin-dr
+  namespace: elasticsearch-demo-app
 spec:
   selector:
     node: es-master00
@@ -71,7 +71,7 @@ kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
   name: es-master00
-  namespace: kevin-dr
+  namespace: elasticsearch-demo-app
 spec:
   # Modify this to match your environment
   host: es-master00.apps.development.wels.home
@@ -89,21 +89,21 @@ apiVersion: kubevirt.io/v1
 kind: VirtualMachine
 metadata:
   name: es-master00
-  namespace: kevin-dr
+  namespace: elasticsearch-demo-app
   labels:
     app.kubernetes.io/part-of: elasticsearch
 spec:
   dataVolumeTemplates:
   - metadata:
       name: es-master00
-      namespace: kevin-dr
+      namespace: elasticsearch-demo-app
     spec:
       preallocation: false
       sourceRef:
           kind: DataSource
           # Modify this to match available datasource in your environment
           name: centos-stream9
-          namespace: kevin-dr
+          namespace: elasticsearch-demo-app
       storage:
           storageClassName: ocs-external-storagecluster-ceph-rbd
           resources:
@@ -112,7 +112,7 @@ spec:
                   storage: 10Gi
   - metadata:
       name: es-master00-data
-      namespace: kevin-dr
+      namespace: elasticsearch-demo-app
     spec:
       preallocation: false
       source:
