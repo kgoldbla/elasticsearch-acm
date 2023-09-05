@@ -103,13 +103,13 @@ spec:
           kind: DataSource
           # Modify this to match available datasource in your environment
           name: centos-stream9
-          namespace: elasticsearch-demo-app
+          namespace: openshift-virtualization-os-images
       storage:
           storageClassName: ocs-external-storagecluster-ceph-rbd
           resources:
               requests:
                   # Modify this to match requirements for your environment
-                  storage: 10Gi
+                  storage: 30Gi
   - metadata:
       name: es-master00-data
       namespace: elasticsearch-demo-app
@@ -171,7 +171,7 @@ spec:
         resources:
           requests:
             # Increase if the amount of memory used by elasticsearch is increased
-            memory: 2Gi
+            memory: 4Gi
       networks:
         - name: default
           pod: {}
