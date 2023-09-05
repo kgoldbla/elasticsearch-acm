@@ -105,6 +105,7 @@ spec:
           name: centos-stream9
           namespace: kevin-dr
       storage:
+          storageClassName: ocs-external-storagecluster-ceph-rbd
           resources:
               requests:
                   # Modify this to match requirements for your environment
