@@ -4,7 +4,7 @@ metadata:
   name: elasticsearch
   namespace: elasticsearch-demo-app
 spec:
-  host: elasticsearch.apps.kvcluster1.apps.development.wels.home
+  host: elasticsearch.apps.asagare-c1.qe.rh-ocs.com
 ---
 apiVersion: route.openshift.io/v1
 kind: Route
@@ -12,7 +12,7 @@ metadata:
   name: kibana
   namespace: elasticsearch-demo-app
 spec:
-  host: kibana.apps.kvcluster1.apps.development.wels.home
+  host: kibana.apps.asagare-c1.qe.rh-ocs.com
 ---
 apiVersion: route.openshift.io/v1
 kind: Route
@@ -20,7 +20,7 @@ metadata:
   name: coordinate
   namespace: elasticsearch-demo-app
 spec:
-  host: coordinate.apps.kvcluster1.apps.development.wels.home
+  host: coordinate.apps.asagare-c1.qe.rh-ocs.com
 ---
 apiVersion: route.openshift.io/v1
 kind: Route
@@ -28,5 +28,5 @@ metadata:
   name: es-master00
   namespace: elasticsearch-demo-app
 spec:
-  host: es-master00.apps.kvcluster1.apps.development.wels.home
+  host: es-master00.apps.asagare-c1.qe.rh-ocs.com
 
