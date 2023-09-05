@@ -10,6 +10,6 @@ spec:
         - name: kibana
           env:
             - name: SERVER_PUBLICBASEURL
-              value: https://kibana-demo.apps.kvcluster2.apps.development.wels.home
+              value: https://kibana-demo.apps.asagare-c2.qe.rh-ocs.com
             - name: SERVER_NAME
-              value: kibana-demo.apps.kvcluster2.apps.development.wels.home
+              value: kibana-demo.apps.asagare-c2.qe.rh-ocs.com
