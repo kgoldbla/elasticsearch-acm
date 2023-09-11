@@ -3,7 +3,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: es-master00-conf ##es-master00-conf
-  namespace: elasticsearch-demo-app
+  namespace: elasticsearch-demo-app4
 data:
   # Modify the Xms and Xmx values as appropriate for your application
   # Modify the network.publish_host to match the service and namespace in your environment
@@ -14,7 +14,7 @@ data:
     node.name: es-master00 
     node.roles: [ master, data ]
     network.host: _site_
-    network.publish_host: es-master00.elasticsearch-demo-app.svc.cluster.local
+    network.publish_host: es-master00.elasticsearch-demo-app4.svc.cluster.local
     discovery.seed_hosts: ["es-master00"] 
     cluster.initial_master_nodes: ["es-master00"]
     path.data: /srv/elasticsearch
@@ -45,7 +45,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: es-master00 
-  namespace: elasticsearch-demo-app
+  namespace: elasticsearch-demo-app4
 spec:
   selector:
     node: es-master00 
@@ -71,7 +71,7 @@ kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
   name: es-master00 
-  namespace: elasticsearch-demo-app
+  namespace: elasticsearch-demo-app4
 spec:
   # Modify this to match your environment
   host: es-master00.apps.asagare-c1.qe.rh-ocs.com
@@ -89,14 +89,14 @@ apiVersion: kubevirt.io/v1
 kind: VirtualMachine
 metadata:
   name: es-master00 
-  namespace: elasticsearch-demo-app
+  namespace: elasticsearch-demo-app4
   labels:
     app.kubernetes.io/part-of: elasticsearch
 spec:
   dataVolumeTemplates:
   - metadata:
       name: es-master00 
-      namespace: elasticsearch-demo-app
+      namespace: elasticsearch-demo-app4
     spec:
       preallocation: false
       sourceRef:
@@ -112,7 +112,7 @@ spec:
                   storage: 30Gi
   - metadata:
       name: es-master00-data
-      namespace: elasticsearch-demo-app
+      namespace: elasticsearch-demo-app4
     spec:
       preallocation: false
       source:
