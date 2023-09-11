@@ -2,7 +2,7 @@ apiVersion: volsync.backube/v1alpha1
 kind: ReplicationDestination
 metadata:
   name: es-master00
-  namespace: elasticsearch-demo-app
+  namespace: elasticsearch-demo-app4
 spec:
   rsync:
     sshKeys: volsync-rsync-dst-dest-ssh
@@ -18,7 +18,7 @@ apiVersion: volsync.backube/v1alpha1
 kind: ReplicationDestination
 metadata:
   name: es-master00-data
-  namespace: elasticsearch-demo-app
+  namespace: elasticsearch-demo-app4
 spec:
   rsync:
     sshKeys: volsync-rsync-dst-dest-ssh
