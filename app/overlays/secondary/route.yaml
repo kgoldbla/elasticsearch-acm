@@ -2,7 +2,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: elasticsearch
-  namespace: elasticsearch-demo-app
+  namespace: elasticsearch-demo-app4
 spec:
   host: elasticsearch.apps.asagare-c2.qe.rh-ocs.com
 ---
@@ -10,7 +10,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: kibana
-  namespace: elasticsearch-demo-app
+  namespace: elasticsearch-demo-app4
 spec:
   host: kibana.apps.asagare-c2.qe.rh-ocs.com
 ---
@@ -18,7 +18,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: coordinate
-  namespace: elasticsearch-demo-app
+  namespace: elasticsearch-demo-app4
 spec:
   host: coordinate.apps.asagare-c2.qe.rh-ocs.com
 ---
@@ -26,7 +26,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: es-master00
-  namespace: elasticsearch-demo-app
+  namespace: elasticsearch-demo-app4
 spec:
   host: es-master00.apps.asagare-c2.qe.rh-ocs.com
 
