@@ -10,9 +10,9 @@ else
   exit 1
 fi
 
-pods=$(oc get pods -n elasticsearch-demo-app --no-headers=true | cut -d' ' -f 1)
+pods=$(oc get pods -n elasticsearch-demo-app2 --no-headers=true | cut -d' ' -f 1)
 for pod in $pods; do
   echo "deleting pod $pod"
-  oc delete pod -n elasticsearch-demo-app $pod
+  oc delete pod -n elasticsearch-demo-app2 $pod
 done
 
