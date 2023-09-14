@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: kibana
-  namespace: elasticsearch-demo-app3
+  namespace: elasticsearch-demo-app5
 spec:
   template:
     spec:
