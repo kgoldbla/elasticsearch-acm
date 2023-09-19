@@ -6,5 +6,5 @@ data:
 kind: Secret
 metadata:
   name: volsync-rsync-dst-src-ssh
-  namespace: elasticsearch-demo-app2
+  namespace: elasticsearch-demo-app6
 type: Opaque
