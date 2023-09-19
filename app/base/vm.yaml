@@ -98,7 +98,7 @@ spec:
       name: es-master00 
       namespace: elasticsearch-demo-app6
       labels:
-        appname: busybox-rbd
+        appname: busybox-cephfs
     spec:
       preallocation: false
       sourceRef:
@@ -116,7 +116,7 @@ spec:
       name: es-master00-data
       namespace: elasticsearch-demo-app6
       labels:
-        appname: busybox-rbd
+        appname: busybox-cephfs
     spec:
       preallocation: false
       source:
