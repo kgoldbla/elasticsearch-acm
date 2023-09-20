@@ -3,7 +3,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: coordinate
-  namespace: elasticsearch-demo-app2
+  namespace: elasticsearch-demo-app8
 spec:
   ports:
     - name: elasticsearch
@@ -20,7 +20,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: coordinate
-  namespace: elasticsearch-demo-app2
+  namespace: elasticsearch-demo-app8
   annotations:
     app.openshift.io/connects-to: '[{"apiVersion":"kubevirt.io/v1","kind":"VirtualMachine","name":"es-master00"}]'
   labels:
@@ -67,7 +67,7 @@ spec:
           - name: node.roles
             value: "[]"
           - name: network.publish_host
-            value: coordinate.elasticsearch-demo-app2.svc.cluster.local
+            value: coordinate.elasticsearch-demo-app8.svc.cluster.local
           - name: network.host
             value: _site_
           resources: {}
@@ -77,7 +77,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: coordinate
-  namespace: elasticsearch-demo-app2
+  namespace: elasticsearch-demo-app8
   annotations:
     cert-utils-operator.redhat-cop.io/certs-from-secret: letsencrypt
   labels:
